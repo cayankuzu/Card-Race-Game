@@ -22,7 +22,10 @@
             açılan ceza kartı yarışın yönünü değiştirsin.
           </p>
         </div>
-        <button class="ghost-button" id="resetButton" type="button">Yeniden başlat</button>
+        <div class="hero-actions">
+          <button class="ghost-button" id="helpButton" type="button">Yardım</button>
+          <button class="ghost-button" id="resetButton" type="button">Yeniden başlat</button>
+        </div>
       </header>
 
       <section class="game-layout" aria-label="Oyun alanı">
@@ -73,5 +76,19 @@
         <ol id="gameLog"></ol>
       </section>
     </main>
+    <div class="rules-overlay is-visible" id="rulesOverlay" role="dialog" aria-modal="true" aria-labelledby="rulesTitle">
+      <section class="rules-dialog">
+        <p class="eyebrow">NASIL OYNANIR?</p>
+        <h2 id="rulesTitle">Asını finişe taşı</h2>
+        <p>Kart çektiğinde kartın sembolüyle aynı as pistte bir basamak ilerler.</p>
+        <ul>
+          <li>Dört as da bir eşiği geçtiğinde o basamağın ceza kartı açılır.</li>
+          <li>Ceza kartının sembolündeki as bir basamak geri gider.</li>
+          <li>Finişteki bir asın sembolünü tekrar çekersen yarışı kazanır.</li>
+          <li>Deste biterse pistte en ilerideki as kazanır.</li>
+        </ul>
+        <button class="rules-primary" id="closeRules" type="button">Oyuna başla</button>
+      </section>
+    </div>
   </body>
 </html>

@@ -19,6 +19,9 @@ const penaltyRow = document.querySelector("#penaltyRow");
 const milestonesElement = document.querySelector("#milestones");
 const drawButton = document.querySelector("#drawButton");
 const resetButton = document.querySelector("#resetButton");
+const helpButton = document.querySelector("#helpButton");
+const rulesOverlay = document.querySelector("#rulesOverlay");
+const closeRules = document.querySelector("#closeRules");
 const drawnCard = document.querySelector("#drawnCard");
 const deckCount = document.querySelector("#deckCount");
 const statusElement = document.querySelector("#status");
@@ -151,4 +154,11 @@ function draw() {
 
 drawButton.addEventListener("click", draw);
 resetButton.addEventListener("click", createGame);
+helpButton.addEventListener("click", () => {
+  closeRules.textContent = "Oyuna dön";
+  rulesOverlay.classList.add("is-visible");
+});
+closeRules.addEventListener("click", () => {
+  rulesOverlay.classList.remove("is-visible");
+});
 createGame();
