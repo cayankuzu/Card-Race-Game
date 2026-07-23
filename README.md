@@ -20,3 +20,9 @@ python card_race_game.py
 ```
 
 Colab sürümü: [Card Race Game](https://colab.research.google.com/drive/1aAZN6_8QMpRF14nnn7GuxYBTzFvBOi5E?usp=sharing)
+
+## Web sürümü
+
+[Asların Yarışı'nı tarayıcıda oyna](https://card-race-game.vercel.app/)
+
+Web sürümü `index.html`, `styles.css` ve `game.js` dosyalarından oluşur; kurulum gerektirmeden masaüstü ve mobil tarayıcılarda çalışır.
