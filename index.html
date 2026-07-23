@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dört asın sekiz basamaklı pistte yarıştığı tarayıcı kart oyunu."
+    />
+    <title>Asların Yarışı</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">İSKAMBİL DENEYİ</p>
+          <h1>Asların Yarışı</h1>
+          <p class="intro">
+            Kart çek, aynı semboldeki ası ilerlet. Bütün aslar bir eşiği geçtiğinde
+            açılan ceza kartı yarışın yönünü değiştirsin.
+          </p>
+        </div>
+        <button class="ghost-button" id="resetButton" type="button">Yeniden başlat</button>
+      </header>
+
+      <section class="game-layout" aria-label="Oyun alanı">
+        <div class="race-card">
+          <div class="track-head">
+            <span>BAŞLANGIÇ</span>
+            <div class="milestones" id="milestones" aria-hidden="true"></div>
+            <span>FİNİŞ</span>
+          </div>
+          <div class="lanes" id="lanes"></div>
+          <div class="penalty-row" id="penaltyRow"></div>
+        </div>
+
+        <aside class="control-card">
+          <div class="deck-stage">
+            <div class="playing-card card-back" id="deckCard" aria-hidden="true">
+              <span>F</span>
+            </div>
+            <div class="playing-card drawn-card is-empty" id="drawnCard" aria-live="polite">
+              <span>?</span>
+            </div>
+          </div>
+
+          <button class="draw-button" id="drawButton" type="button">
+            Kart çek
+            <small id="deckCount">44 kart kaldı</small>
+          </button>
+
+          <div class="status-panel">
+            <p class="status" id="status" aria-live="polite">
+              Yarışı başlatmak için ilk kartı çek.
+            </p>
+            <div class="legend" aria-label="Semboller">
+              <span class="club">♣ Sinek</span>
+              <span class="diamond">♦ Karo</span>
+              <span class="heart">♥ Kupa</span>
+              <span class="spade">♠ Maça</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="log-card" aria-labelledby="logTitle">
+        <div>
+          <p class="eyebrow" id="logTitle">YARIŞ GÜNLÜĞÜ</p>
+          <p>Son hamleler burada görünür.</p>
+        </div>
+        <ol id="gameLog"></ol>
+      </section>
+    </main>
+  </body>
+</html>
